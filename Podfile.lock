@@ -1,0 +1,30 @@
+PODS:
+  - MBCircularProgressBar (0.3.5)
+  - Realm (10.5.0):
+    - Realm/Headers (= 10.5.0)
+  - Realm/Headers (10.5.0)
+  - RealmSwift (10.5.0):
+    - Realm (= 10.5.0)
+  - "UITextView+Placeholder (1.4.0)"
+
+DEPENDENCIES:
+  - MBCircularProgressBar
+  - RealmSwift
+  - "UITextView+Placeholder"
+
+SPEC REPOS:
+  trunk:
+    - MBCircularProgressBar
+    - Realm
+    - RealmSwift
+    - "UITextView+Placeholder"
+
+SPEC CHECKSUMS:
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  Realm: e1c22c3d83b229afb70ebc10e1771c91e9542d12
+  RealmSwift: 6fc078d9d3fd7e58c71bfdbb694e252462f112a5
+  "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
+
+PODFILE CHECKSUM: 46df208765fd9f2898a0dbaf16f64635dac2091c
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="byz-w0-Uc7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="eKg-ak-Xfc">
+            <objects>
+                <navigationController id="byz-w0-Uc7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nLS-w9-CiY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.15525829790000001" green="0.40621352199999999" blue="0.51884073019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IlS-07-Z8p" kind="relationship" relationship="rootViewController" id="A7S-DB-s9A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zIW-kn-XQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1535" y="-108"/>
+        </scene>
+        <!--ホーム-->
+        <scene sceneID="rZW-87-ax0">
+            <objects>
+                <viewController id="IlS-07-Z8p" customClass="HomeViewController" customModule="_0Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z8e-7r-g71">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ikf-N5-85f">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.15926775339999999" green="0.41004252429999999" blue="0.52680510280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="140" id="sMV-jT-Nsf" customClass="PostTableViewCell" customModule="_0Diary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sMV-jT-Nsf" id="eWX-3N-gRp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記録内容" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="45" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sc-Li-lsI">
+                                                    <rect key="frame" x="76" y="19" width="314" height="106"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/dd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGW-sp-aSq">
+                                                    <rect key="frame" x="4" y="16" width="68" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="wGW-sp-aSq" firstAttribute="leading" secondItem="eWX-3N-gRp" secondAttribute="leading" constant="4" id="4DI-gL-ToF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0Sc-Li-lsI" secondAttribute="trailing" constant="4" id="5ix-Ys-Wg8"/>
+                                                <constraint firstItem="0Sc-Li-lsI" firstAttribute="top" secondItem="eWX-3N-gRp" secondAttribute="topMargin" constant="8" id="Mvk-ia-3Ec"/>
+                                                <constraint firstItem="0Sc-Li-lsI" firstAttribute="leading" secondItem="wGW-sp-aSq" secondAttribute="trailing" constant="4" id="b3B-lb-dvn"/>
+                                                <constraint firstItem="wGW-sp-aSq" firstAttribute="top" secondItem="eWX-3N-gRp" secondAttribute="top" constant="16" id="dG0-Gw-LCE"/>
+                                                <constraint firstItem="0Sc-Li-lsI" firstAttribute="leading" secondItem="eWX-3N-gRp" secondAttribute="leadingMargin" constant="56" id="iiq-c8-asE"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0Sc-Li-lsI" secondAttribute="bottom" constant="4" id="ry8-Nj-usF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="wGW-sp-aSq" id="lc3-Sw-2Oc"/>
+                                            <outlet property="postedLabel" destination="0Sc-Li-lsI" id="Fsd-XW-wM3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HFy-bo-f6d"/>
+                        <color key="backgroundColor" red="0.15217205880000001" green="0.3904871345" blue="0.5030694604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ikf-N5-85f" firstAttribute="bottom" secondItem="HFy-bo-f6d" secondAttribute="bottom" id="crz-5f-6KN"/>
+                            <constraint firstItem="ikf-N5-85f" firstAttribute="top" secondItem="HFy-bo-f6d" secondAttribute="top" id="nYm-zm-8OH"/>
+                            <constraint firstItem="ikf-N5-85f" firstAttribute="leading" secondItem="HFy-bo-f6d" secondAttribute="leading" id="tDm-e3-lCb"/>
+                            <constraint firstItem="HFy-bo-f6d" firstAttribute="trailing" secondItem="ikf-N5-85f" secondAttribute="trailing" id="vTg-ap-r5q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ホーム" id="EEP-X7-rKi">
+                        <barButtonItem key="rightBarButtonItem" title="記入" id="cU8-6v-dD4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="newPost:" destination="IlS-07-Z8p" id="vjM-Fj-gzT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="createButton" destination="cU8-6v-dD4" id="C67-KP-ocW"/>
+                        <outlet property="postTableView" destination="ikf-N5-85f" id="pLn-We-NCk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2K-MI-8tO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-501" y="-108"/>
+        </scene>
+        <!--記載画面-->
+        <scene sceneID="cDV-Kd-SUh">
+            <objects>
+                <viewController storyboardIdentifier="PostViewController" title="記載画面" id="O26-Xs-w6O" customClass="PostViewController" customModule="_0Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bo0-0x-WDD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WEW-Kg-J4s">
+                                <rect key="frame" x="20" y="113" width="374" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="EVd-Yz-wqy"/>
+                                </constraints>
+                                <color key="textColor" red="0.15926775339999999" green="0.41004252429999999" blue="0.52680510280000004" alpha="0.6579355736301371" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" systemColor="systemGray2Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="出来事を記録してください"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="3Oj-XG-x47">
+                                <rect key="frame" x="20" y="56" width="374" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="nIu-as-K2O"/>
+                                </constraints>
+                            </datePicker>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfa-Yo-6oX" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="359" y="278" width="30" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87c-XC-7og">
+                                        <rect key="frame" x="4" y="2" width="24" height="26"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="87c-XC-7og" secondAttribute="trailing" constant="2" id="Axq-hC-T2B"/>
+                                    <constraint firstAttribute="height" constant="30" id="FXV-gu-Bjw"/>
+                                    <constraint firstAttribute="bottom" secondItem="87c-XC-7og" secondAttribute="bottom" constant="2" id="IpP-ef-x2X"/>
+                                    <constraint firstItem="87c-XC-7og" firstAttribute="top" secondItem="Jfa-Yo-6oX" secondAttribute="top" constant="2" id="SdK-ss-3ie"/>
+                                    <constraint firstItem="87c-XC-7og" firstAttribute="leading" secondItem="Jfa-Yo-6oX" secondAttribute="leading" constant="4" id="UBY-lo-zz1"/>
+                                    <constraint firstAttribute="width" secondItem="Jfa-Yo-6oX" secondAttribute="height" multiplier="1:1" id="j8i-2W-mxN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineStrokeColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" red="0.2196078431372549" green="0.4570829644666613" blue="0.93694479695431476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="unitFontSize">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressRotationAngle">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="textOffset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyCapType">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressCapType">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KZZ-uZ-9vZ"/>
+                        <color key="backgroundColor" red="0.32893285160000002" green="0.78125315900000003" blue="0.98977404830000004" alpha="0.52822666952054798" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jfa-Yo-6oX" firstAttribute="bottom" secondItem="WEW-Kg-J4s" secondAttribute="bottom" constant="-5" id="HYt-OL-2SH"/>
+                            <constraint firstItem="Jfa-Yo-6oX" firstAttribute="trailing" secondItem="WEW-Kg-J4s" secondAttribute="trailing" constant="-5" id="JgN-9j-ceQ"/>
+                            <constraint firstItem="KZZ-uZ-9vZ" firstAttribute="trailing" secondItem="3Oj-XG-x47" secondAttribute="trailing" constant="20" id="X7H-Qb-WiP"/>
+                            <constraint firstItem="3Oj-XG-x47" firstAttribute="top" secondItem="KZZ-uZ-9vZ" secondAttribute="top" constant="12" id="bck-hx-Xq0"/>
+                            <constraint firstItem="3Oj-XG-x47" firstAttribute="leading" secondItem="KZZ-uZ-9vZ" secondAttribute="leading" constant="20" id="ezi-Ei-XKj"/>
+                            <constraint firstItem="KZZ-uZ-9vZ" firstAttribute="trailing" secondItem="WEW-Kg-J4s" secondAttribute="trailing" constant="20" id="kgF-kh-Brc"/>
+                            <constraint firstItem="WEW-Kg-J4s" firstAttribute="top" secondItem="3Oj-XG-x47" secondAttribute="bottom" constant="12" id="uEZ-Q4-UYF"/>
+                            <constraint firstItem="WEW-Kg-J4s" firstAttribute="leading" secondItem="KZZ-uZ-9vZ" secondAttribute="leading" constant="20" id="yvS-Mo-Owh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="記入ページ" id="gd1-OY-DPc">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="6kZ-jQ-QqA">
+                            <connections>
+                                <action selector="postRepost:" destination="O26-Xs-w6O" id="QqU-kW-e4h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="3Oj-XG-x47" id="zaO-9j-BRg"/>
+                        <outlet property="doneButton" destination="6kZ-jQ-QqA" id="wP2-Ch-6HY"/>
+                        <outlet property="postTextView" destination="WEW-Kg-J4s" id="Qfv-gw-2Zo"/>
+                        <outlet property="progressView" destination="Jfa-Yo-6oX" id="nG0-XO-mbD"/>
+                        <outlet property="wordCountLabel" destination="87c-XC-7og" id="w8c-Q2-shc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJg-on-NvI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="-108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
