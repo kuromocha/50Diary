@@ -11,25 +11,30 @@ import MBCircularProgressBar
 
 class HomeViewController: UIViewController,
                           UITableViewDataSource, UITableViewDelegate {
- 
+    
     private var posts:Results<RealReport>? = nil
+    var firstPosition:Bool = true
     
     @IBOutlet weak var postTableView: UITableView!
-    
     @IBOutlet weak var createButton: UIBarButtonItem!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        postTableView.dataSource = self
-        postTableView.delegate = self
-        let realm = try! Realm()
-        posts = realm.objects(RealReport.self)
-        
-        createButton.style = .done
+        if UserDefaults.standard.bool(forKey: "firstLunch") == false{
+            self.present(Router.getIntroductionView(Editingmode: true), animated: true, completion: nil)
+            print("初めまして")
+            UserDefaults.standard.set(true, forKey: "firstLunch")
+        }else{
+            print("二回目以降だよ")
+            postTableView.dataSource = self
+            postTableView.delegate = self
+            let realm = try! Realm()
+            posts = realm.objects(RealReport.self)
+            createButton.style = .done
+                // reloadDate()は、tableviewに対してデータが新しくなったから更新しろの意
+            postTableView.reloadData()
+        }
     }
-    
-
     
     //ViewControllerが開いた時にデータを更新する
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +48,7 @@ class HomeViewController: UIViewController,
                   numberOfRowsInSection section: Int) -> Int {
         // countが0
         return posts?.count ?? 0
-   }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
     return 1

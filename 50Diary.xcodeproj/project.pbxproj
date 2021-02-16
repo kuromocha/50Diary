@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4607EA402566C7CE0035B855 /* RealReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607EA3F2566C7CE0035B855 /* RealReport.swift */; };
 		4607EA472566CAB60035B855 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607EA462566CAB60035B855 /* PostTableViewCell.swift */; };
+		46355A4225CCD7D800E8EC76 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46355A4125CCD7D800E8EC76 /* Color.xcassets */; };
 		465FED3D252090C1003E6845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FED3C252090C1003E6845 /* AppDelegate.swift */; };
 		465FED3F252090C1003E6845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FED3E252090C1003E6845 /* SceneDelegate.swift */; };
 		465FED44252090C1003E6845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 465FED42252090C1003E6845 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 		465FED49252090C4003E6845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 465FED47252090C4003E6845 /* LaunchScreen.storyboard */; };
 		465FED5B2520974F003E6845 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FED592520974F003E6845 /* PostViewController.swift */; };
 		465FED66252097ED003E6845 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FED64252097ED003E6845 /* HomeViewController.swift */; };
+		46A9730625D52A8900EF6BCF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9730525D52A8900EF6BCF /* Router.swift */; };
+		46A9730925D52B3C00EF6BCF /* IntroductionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A9730825D52B3C00EF6BCF /* IntroductionView.storyboard */; };
+		46A9730C25D52B8C00EF6BCF /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9730B25D52B8C00EF6BCF /* IntroductionViewController.swift */; };
 		46F3BE62257C798000F447CA /* extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3BE61257C798000F447CA /* extention.swift */; };
 		AE8ED6AF1C8A02C213979FBA /* Pods_50Diary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310DDC7720E18EBAF45F8D70 /* Pods_50Diary.framework */; };
 /* End PBXBuildFile section */
@@ -24,6 +28,7 @@
 		310DDC7720E18EBAF45F8D70 /* Pods_50Diary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_50Diary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4607EA3F2566C7CE0035B855 /* RealReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealReport.swift; sourceTree = "<group>"; };
 		4607EA462566CAB60035B855 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		46355A4125CCD7D800E8EC76 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		465FED39252090C1003E6845 /* 50Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 50Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		465FED3C252090C1003E6845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		465FED3E252090C1003E6845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +38,9 @@
 		465FED4A252090C4003E6845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		465FED592520974F003E6845 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		465FED64252097ED003E6845 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		46A9730525D52A8900EF6BCF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		46A9730825D52B3C00EF6BCF /* IntroductionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroductionView.storyboard; sourceTree = "<group>"; };
+		46A9730B25D52B8C00EF6BCF /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		46F3BE61257C798000F447CA /* extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extention.swift; sourceTree = "<group>"; };
 		6235219FCBC82919049B122E /* Pods-50Diary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50Diary.debug.xcconfig"; path = "Target Support Files/Pods-50Diary/Pods-50Diary.debug.xcconfig"; sourceTree = "<group>"; };
 		8173F214487103E85FCFA53F /* Pods-50Diary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50Diary.release.xcconfig"; path = "Target Support Files/Pods-50Diary/Pods-50Diary.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,16 +89,20 @@
 			isa = PBXGroup;
 			children = (
 				465FED42252090C1003E6845 /* Main.storyboard */,
+				46A9730825D52B3C00EF6BCF /* IntroductionView.storyboard */,
+				465FED47252090C4003E6845 /* LaunchScreen.storyboard */,
 				4607EA3F2566C7CE0035B855 /* RealReport.swift */,
 				465FED64252097ED003E6845 /* HomeViewController.swift */,
 				465FED592520974F003E6845 /* PostViewController.swift */,
 				4607EA462566CAB60035B855 /* PostTableViewCell.swift */,
+				46A9730B25D52B8C00EF6BCF /* IntroductionViewController.swift */,
 				465FED45252090C4003E6845 /* Assets.xcassets */,
-				465FED4A252090C4003E6845 /* Info.plist */,
-				465FED47252090C4003E6845 /* LaunchScreen.storyboard */,
+				46355A4125CCD7D800E8EC76 /* Color.xcassets */,
 				465FED3C252090C1003E6845 /* AppDelegate.swift */,
-				465FED3E252090C1003E6845 /* SceneDelegate.swift */,
 				46F3BE61257C798000F447CA /* extention.swift */,
+				46A9730525D52A8900EF6BCF /* Router.swift */,
+				465FED4A252090C4003E6845 /* Info.plist */,
+				465FED3E252090C1003E6845 /* SceneDelegate.swift */,
 			);
 			path = 50Diary;
 			sourceTree = "<group>";
@@ -163,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				465FED49252090C4003E6845 /* LaunchScreen.storyboard in Resources */,
+				46355A4225CCD7D800E8EC76 /* Color.xcassets in Resources */,
 				465FED46252090C4003E6845 /* Assets.xcassets in Resources */,
+				46A9730925D52B3C00EF6BCF /* IntroductionView.storyboard in Resources */,
 				465FED44252090C1003E6845 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,9 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A9730625D52A8900EF6BCF /* Router.swift in Sources */,
 				465FED66252097ED003E6845 /* HomeViewController.swift in Sources */,
 				465FED5B2520974F003E6845 /* PostViewController.swift in Sources */,
 				465FED3D252090C1003E6845 /* AppDelegate.swift in Sources */,
+				46A9730C25D52B8C00EF6BCF /* IntroductionViewController.swift in Sources */,
 				465FED3F252090C1003E6845 /* SceneDelegate.swift in Sources */,
 				4607EA402566C7CE0035B855 /* RealReport.swift in Sources */,
 				46F3BE62257C798000F447CA /* extention.swift in Sources */,
@@ -372,15 +388,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XRNJAFYLW3;
 				INFOPLIST_FILE = 50Diary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tokyo.mocha.50Diary.-50Diary";
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.mocha.50Diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -394,15 +410,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XRNJAFYLW3;
 				INFOPLIST_FILE = 50Diary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tokyo.mocha.50Diary.-50Diary";
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.mocha.50Diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

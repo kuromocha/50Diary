@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,13 +15,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nLS-w9-CiY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.15525829790000001" green="0.40621352199999999" blue="0.51884073019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="TitleText"/>
+                        <color key="tintColor" name="TitleText"/>
+                        <color key="barTintColor" name="Titlebar"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" name="TitleText"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" name="TitleText"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -36,14 +36,14 @@
         <!--ホーム-->
         <scene sceneID="rZW-87-ax0">
             <objects>
-                <viewController id="IlS-07-Z8p" customClass="HomeViewController" customModule="_0Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home_View" id="IlS-07-Z8p" customClass="HomeViewController" customModule="_0Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z8e-7r-g71">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ikf-N5-85f">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" red="0.15926775339999999" green="0.41004252429999999" blue="0.52680510280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="140" id="sMV-jT-Nsf" customClass="PostTableViewCell" customModule="_0Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="140"/>
@@ -54,18 +54,19 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記録内容" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="45" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sc-Li-lsI">
                                                     <rect key="frame" x="76" y="19" width="314" height="106"/>
+                                                    <color key="backgroundColor" name="CellBackground"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" name="CellText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/dd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGW-sp-aSq">
                                                     <rect key="frame" x="4" y="16" width="68" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" name="CellText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="CellBackground"/>
                                             <constraints>
                                                 <constraint firstItem="wGW-sp-aSq" firstAttribute="leading" secondItem="eWX-3N-gRp" secondAttribute="leading" constant="4" id="4DI-gL-ToF"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0Sc-Li-lsI" secondAttribute="trailing" constant="4" id="5ix-Ys-Wg8"/>
@@ -76,6 +77,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="0Sc-Li-lsI" secondAttribute="bottom" constant="4" id="ry8-Nj-usF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="CellBackground"/>
                                         <color key="tintColor" name="AccentColor"/>
                                         <connections>
                                             <outlet property="dayLabel" destination="wGW-sp-aSq" id="lc3-Sw-2Oc"/>
@@ -86,7 +88,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HFy-bo-f6d"/>
-                        <color key="backgroundColor" red="0.15217205880000001" green="0.3904871345" blue="0.5030694604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="ikf-N5-85f" firstAttribute="bottom" secondItem="HFy-bo-f6d" secondAttribute="bottom" id="crz-5f-6KN"/>
                             <constraint firstItem="ikf-N5-85f" firstAttribute="top" secondItem="HFy-bo-f6d" secondAttribute="top" id="nYm-zm-8OH"/>
@@ -96,7 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="ホーム" id="EEP-X7-rKi">
                         <barButtonItem key="rightBarButtonItem" title="記入" id="cU8-6v-dD4">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="TitleText"/>
                             <connections>
                                 <action selector="newPost:" destination="IlS-07-Z8p" id="vjM-Fj-gzT"/>
                             </connections>
@@ -121,16 +123,17 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WEW-Kg-J4s">
                                 <rect key="frame" x="20" y="113" width="374" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="PostBackground＆Progress"/>
+                                <color key="tintColor" name="PostText"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="EVd-Yz-wqy"/>
                                 </constraints>
-                                <color key="textColor" red="0.15926775339999999" green="0.41004252429999999" blue="0.52680510280000004" alpha="0.6579355736301371" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                <color key="textColor" name="PostText"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" systemColor="systemGray2Color"/>
+                                        <color key="value" name="Placeholder"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="出来事を記録してください"/>
                                 </userDefinedRuntimeAttributes>
@@ -166,10 +169,10 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" name="PostBackground＆Progress"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="emptyLineStrokeColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" name="PostBackground＆Progress"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
                                         <color key="value" red="0.2196078431372549" green="0.4570829644666613" blue="0.93694479695431476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -212,7 +215,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KZZ-uZ-9vZ"/>
-                        <color key="backgroundColor" red="0.32893285160000002" green="0.78125315900000003" blue="0.98977404830000004" alpha="0.52822666952054798" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="TableViewBack"/>
                         <constraints>
                             <constraint firstItem="Jfa-Yo-6oX" firstAttribute="bottom" secondItem="WEW-Kg-J4s" secondAttribute="bottom" constant="-5" id="HYt-OL-2SH"/>
                             <constraint firstItem="Jfa-Yo-6oX" firstAttribute="trailing" secondItem="WEW-Kg-J4s" secondAttribute="trailing" constant="-5" id="JgN-9j-ceQ"/>
@@ -226,6 +229,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="記入ページ" id="gd1-OY-DPc">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="6kZ-jQ-QqA">
+                            <color key="tintColor" name="TitleText"/>
                             <connections>
                                 <action selector="postRepost:" destination="O26-Xs-w6O" id="QqU-kW-e4h"/>
                             </connections>
@@ -248,8 +252,32 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="Background">
+            <color red="0.0" green="0.29800000786781311" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CellBackground">
+            <color red="0.98799997568130493" green="0.96899998188018799" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CellText">
+            <color red="0.0" green="0.22300000488758087" blue="0.38499999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Placeholder">
+            <color red="0.83499997854232788" green="0.83899998664855957" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PostBackground＆Progress">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PostText">
+            <color red="0.024000000208616257" green="0.071000002324581146" blue="0.21899999678134918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TableViewBack">
+            <color red="0.0" green="0.29800000786781311" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleText">
+            <color red="0.98799997568130493" green="0.96899998188018799" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Titlebar">
+            <color red="0.9100000262260437" green="0.2199999988079071" blue="0.050999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

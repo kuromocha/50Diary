@@ -13,12 +13,11 @@ class PostViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var wordCountLabel: UILabel!
-
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
     @IBOutlet weak var progressView: MBCircularProgressBarView!
+    
     
     fileprivate var maxWordCount:Int = 50
     var selectedReportId = 0
@@ -26,8 +25,6 @@ class PostViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        doneButton.tintColor = UIColor.white
         doneButton.style = .done
         
         if isEditMode {
@@ -61,18 +58,16 @@ class PostViewController: UIViewController, UITextViewDelegate {
         }
     
     
-    @objc func dismissKeyboard() {
-            self.view.endEditing(true)
-        }
-    
     //分岐50字超えてるときと超えてないとき
     @IBAction func postRepost(_ sender: Any) {
+// 最初のページに飛ばす
+//        self.present(Router.getIntroductionView(Editingmode: true), animated: true, completion: nil)
         let realm = try! Realm()
         let calendar = Calendar(identifier: .gregorian)
         let isContainSameDay = !realm.objects(RealReport.self)
             .filter{ calendar.isDate(self.datePicker.date, inSameDayAs: $0.createdAt) }
             .isEmpty
-        
+
         // 文字数エラ-チェック
         if postTextView.text.count > maxWordCount{
             overAlert()
@@ -84,7 +79,7 @@ class PostViewController: UIViewController, UITextViewDelegate {
         }else{
             choiceSaveEdit()
         }
-        
+
     }
     //新しいデータをセーブする
     private func save() {
@@ -92,6 +87,17 @@ class PostViewController: UIViewController, UITextViewDelegate {
         let savedata = RealReport()
 //        print(datePicker.date)
         savedata.setNewId()
+        savedata.createdAt = datePicker.date
+        savedata.postText = postTextView.text!
+        try! realm.write {
+            realm.add(savedata, update: .modified)
+        }
+    }
+    
+    private func samedayEdit(){
+        let realm = try! Realm()
+        let savedata = RealReport()
+        savedata.id = selectedReportId
         savedata.createdAt = datePicker.date
         savedata.postText = postTextView.text!
         try! realm.write {
@@ -144,12 +150,22 @@ class PostViewController: UIViewController, UITextViewDelegate {
     private func showSameDayErrorAlert() {
             let alert = UIAlertController(title: "日付が被っています", message: "はいを選ぶと同じ日付の記録が消えて、この記録が保存されます", preferredStyle: .alert)
             let yesAction = UIAlertAction(title: "はい", style: .default, handler: { (UIAlertAction) in
+                let realm = try! Realm()
+                let calendar = Calendar(identifier: .gregorian)
+                let sameDay = realm.objects(RealReport.self)
+                    .filter{ calendar.isDate(self.datePicker.date, inSameDayAs: $0.createdAt) }.first
+//                print(sameDay)
+                self.isEditing = true
+                self.selectedReportId = sameDay!.id
+                self.edit()
+                self.navigationController?.popViewController(animated: true)
+//                try! realm.write(){
+//                }
+//                print("\(sameDay!.id)")
 //                print("「はい」が選択されました！")
-//                var selectedReportId = reports
-                self.choiceSaveEdit()
             })
             let noAction = UIAlertAction(title: "いいえ", style: .default, handler: { (UIAlertAction) in
-//                print("「いいえ」が選択されました！")
+                print("「いいえ」が選択されました！")
             })
         
             alert.addAction(noAction)
